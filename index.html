@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landingin - Jasa Pembuatan Landing Page End-to-End</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Landingin - Jasa Pembuatan Landing Page End-to-End">
+    <meta property="og:description" content="Ubah pengunjung menjadi pembeli dengan landing page profesional. Kami merancang, membangun, dan meng-hosting landing page Anda dari nol.">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="https://landingin.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Landingin">
+    <meta name="description" content="Jasa pembuatan landing page profesional end-to-end. Desain eksklusif, copywriting persuasif, hosting gratis. Tingkatkan konversi bisnis Anda sekarang!">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Landingin - Jasa Pembuatan Landing Page End-to-End">
+    <meta name="twitter:description" content="Ubah pengunjung menjadi pembeli dengan landing page profesional.">
+    <meta name="twitter:image" content="img/logo.png">
+
+    <link rel="icon" type="image/png" href="img/logo1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1ABC9C;
+            --primary-dark: #16A085;
+            --secondary: #2C3E50;
+            --bg-light: #F8F9FA;
+            --text-dark: #333333;
+            --text-muted: #666666;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        p {
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(26, 188, 156, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 188, 156, 0.4);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            background: linear-gradient(135deg, var(--bg-light) 0%, #E0F2F1 100%);
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .floating-element {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(45deg, var(--primary), #48C9B0);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: morph 8s ease-in-out infinite, float 6s ease-in-out infinite;
+            box-shadow: 0 20px 50px rgba(26, 188, 156, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            padding: 100px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #f1f1f1;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(26, 188, 156, 0.15);
+            border-color: var(--primary);
+        }
+
+        .icon-box {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+        }
+
+        .price-tag {
+            font-size: 32px;
+            color: var(--primary);
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        .price-tag span {
+            font-size: 16px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        ul.features-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        ul.features-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        ul.features-list li::before {
+            content: '✓';
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: var(--secondary);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 5%;
+        }
+
+        .map-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .map-section .section-title {
+            color: var(--white);
+        }
+
+        .map-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(26, 188, 156, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(72, 201, 176, 0.06) 0%, transparent 50%);
+            animation: rotateGlow 15s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotateGlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .map-3d-wrapper {
+            perspective: 1000px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .map-container {
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 
+                0 25px 60px rgba(0, 0, 0, 0.4),
+                0 0 40px rgba(26, 188, 156, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transform: rotateX(8deg) rotateY(-3deg) scale(0.95);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            border: 2px solid rgba(26, 188, 156, 0.3);
+        }
+
+        .map-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), #48C9B0, var(--primary));
+            z-index: 10;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .map-container:hover {
+            transform: rotateX(2deg) rotateY(0deg) scale(1);
+            box-shadow: 
+                0 35px 80px rgba(0, 0, 0, 0.5),
+                0 0 60px rgba(26, 188, 156, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            border-color: rgba(26, 188, 156, 0.6);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            display: block;
+        }
+
+        .map-pin-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), #48C9B0);
+            border-radius: 50%;
+            margin-bottom: 20px;
+            font-size: 28px;
+            box-shadow: 0 8px 25px rgba(26, 188, 156, 0.4);
+            animation: pulse-pin 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-pin {
+            0%, 100% { transform: scale(1); box-shadow: 0 8px 25px rgba(26, 188, 156, 0.4); }
+            50% { transform: scale(1.1); box-shadow: 0 12px 35px rgba(26, 188, 156, 0.6); }
+        }
+
+        .map-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        @keyframes morph {
+            0% {
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
+
+            50% {
+                border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+            }
+
+            100% {
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px) scale(0.95);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 100px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .floating-element {
+                width: 300px;
+                height: 300px;
+                margin-top: 40px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .map-container iframe {
+                height: 300px;
+            }
+
+            .map-container {
+                transform: rotateX(4deg) rotateY(0deg) scale(0.98);
+            }
+
+            .map-container:hover {
+                transform: rotateX(0deg) rotateY(0deg) scale(1);
+            }
+        }
+
+        /* === STATS COUNTER === */
+        .stats-section { background: linear-gradient(135deg, var(--secondary) 0%, #1a252f 100%); padding: 60px 5%; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; text-align: center; }
+        .stat-item h3 { font-size: 42px; color: var(--primary); margin-bottom: 5px; }
+        .stat-item p { color: rgba(255,255,255,0.8); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* === HOW IT WORKS === */
+        .steps-section { background: var(--white); }
+        .steps-container { max-width: 800px; margin: 0 auto; position: relative; }
+        .steps-container::before { content: ''; position: absolute; left: 30px; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, var(--primary), #48C9B0); border-radius: 3px; }
+        .step-item { display: flex; gap: 30px; margin-bottom: 50px; position: relative; align-items: flex-start; }
+        .step-number { width: 60px; height: 60px; min-width: 60px; background: linear-gradient(135deg, var(--primary), #48C9B0); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: white; z-index: 2; box-shadow: 0 8px 25px rgba(26,188,156,0.35); }
+        .step-content h3 { margin-bottom: 8px; font-size: 20px; }
+        .step-content p { font-size: 15px; }
+
+        /* === TESTIMONIALS === */
+        .testimonials-section { background: var(--bg-light); }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+        .testimonial-card { padding: 35px; background: var(--white); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); text-align: center; border: 1px solid #f0f0f0; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .testimonial-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(26,188,156,0.12); border-color: var(--primary); }
+        .testimonial-card .stars { color: #f1c40f; font-size: 20px; margin-bottom: 15px; }
+        .testimonial-card blockquote { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+        .testimonial-author { font-weight: 700; color: var(--secondary); }
+        .testimonial-role { font-size: 13px; color: var(--text-muted); }
+        .testimonial-avatar { width: 70px; height: 70px; border-radius: 50%; margin: 0 auto 15px; overflow: hidden; border: 3px solid var(--primary); box-shadow: 0 4px 15px rgba(26,188,156,0.3); }
+        .testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* === FAQ === */
+        .faq-section { background: var(--white); }
+        .faq-container { max-width: 750px; margin: 0 auto; }
+        .faq-item { background: var(--bg-light); border-radius: 15px; margin-bottom: 15px; overflow: hidden; border: 1px solid #eee; transition: border-color 0.3s; }
+        .faq-item.open { border-color: var(--primary); }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 20px 25px; cursor: pointer; font-weight: 600; color: var(--secondary); font-size: 16px; }
+        .faq-question .faq-icon { font-size: 20px; transition: transform 0.3s; color: var(--primary); }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 25px; }
+        .faq-answer p { padding-bottom: 20px; font-size: 15px; }
+        .faq-item.open .faq-answer { max-height: 200px; }
+
+        /* === FLOATING WA === */
+        .floating-wa { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; z-index: 999; box-shadow: 0 6px 20px rgba(37,211,102,0.4); transition: all 0.3s; animation: wa-pulse 2s infinite; }
+        .floating-wa:hover { transform: scale(1.15); box-shadow: 0 8px 30px rgba(37,211,102,0.6); }
+        @keyframes wa-pulse { 0%,100% { box-shadow: 0 6px 20px rgba(37,211,102,0.4); } 50% { box-shadow: 0 6px 30px rgba(37,211,102,0.7); } }
+
+        /* === BACK TO TOP === */
+        .back-to-top { position: fixed; bottom: 30px; left: 30px; width: 45px; height: 45px; background: var(--secondary); color: white; border: none; border-radius: 50%; font-size: 20px; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s; z-index: 999; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background: var(--primary); transform: translateY(-3px); }
+
+        /* === HAMBURGER === */
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 5px; z-index: 1001; }
+        .hamburger span { width: 25px; height: 3px; background: var(--secondary); border-radius: 3px; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+        /* === ENHANCED FOOTER === */
+        .enhanced-footer { background: linear-gradient(135deg, #1a252f 0%, var(--secondary) 100%); color: rgba(255,255,255,0.8); padding: 60px 5% 30px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1100px; margin: 0 auto 40px; }
+        .footer-col h4 { color: var(--white); font-size: 18px; margin-bottom: 20px; position: relative; padding-bottom: 10px; }
+        .footer-col h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: var(--primary); border-radius: 3px; }
+        .footer-col p, .footer-col a { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 2; display: block; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-social { display: flex; gap: 12px; margin-top: 10px; }
+        .footer-social a { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 16px; transition: all 0.3s; }
+        .footer-social a:hover { background: var(--primary); transform: translateY(-3px); }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; color: rgba(255,255,255,0.5); }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links.mobile-open { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); gap: 15px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps-container::before { left: 15px; }
+            .step-number { width: 40px; height: 40px; min-width: 40px; font-size: 16px; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/logo1.png" alt="Landingin Logo">
+            Landingin
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="#layanan">Layanan</a>
+            <a href="#cara-kerja">Cara Kerja</a>
+            <a href="#harga">Harga</a>
+            <a href="#testimoni">Testimoni</a>
+            <a href="#faq">FAQ</a>
+            <a href="#lokasi">Lokasi</a>
+        </div>
+        <a href="https://wa.me/62895610090128?text=Halo%20Landingin!%20Saya%20ingin%20konsultasi%20gratis%20mengenai%20pembuatan%20landing%20page." target="_blank" class="btn btn-primary">Konsultasi Gratis</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content reveal active">
+            <h1>Ubah Pengunjung Menjadi Pembeli dengan Landing Page Profesional</h1>
+            <p>Kami merancang, membangun, dan meng-hosting landing page Anda dari nol. Terima beres, siap mendatangkan
+                konversi tinggi untuk bisnis Anda.</p>
+            <button class="btn btn-primary" style="padding: 15px 35px; font-size: 18px;"
+                onclick="window.location.href='#harga'">Mulai Sekarang</button>
+        </div>
+        <div class="hero-image reveal active delay-2">
+            <div class="floating-element">
+                Desain Modern<br>&amp; Performa Tinggi
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Counter -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item reveal"><h3 id="counter-projects">0</h3><p>Proyek Selesai</p></div>
+            <div class="stat-item reveal delay-1"><h3 id="counter-clients">0</h3><p>Klien Puas</p></div>
+            <div class="stat-item reveal delay-2"><h3 id="counter-years">0</h3><p>Tahun Pengalaman</p></div>
+            <div class="stat-item reveal delay-3"><h3 id="counter-uptime">0</h3><p>% Uptime Server</p></div>
+        </div>
+    </section>
+
+    <section id="layanan" class="bg-light">
+        <h2 class="section-title reveal">Kenapa Memilih Landingin?</h2>
+        <div class="grid" id="fitur-container">
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="cara-kerja" class="steps-section">
+        <h2 class="section-title reveal">Cara Kerja Kami</h2>
+        <div class="steps-container">
+            <div class="step-item reveal">
+                <div class="step-number">1</div>
+                <div class="step-content"><h3>Konsultasi & Briefing</h3><p>Kami memahami bisnis, target pasar, dan tujuan Anda secara mendalam melalui sesi konsultasi gratis.</p></div>
+            </div>
+            <div class="step-item reveal delay-1">
+                <div class="step-number">2</div>
+                <div class="step-content"><h3>Desain & Copywriting</h3><p>Tim kreatif kami merancang tampilan visual premium dan menulis copywriting persuasif yang mengkonversi.</p></div>
+            </div>
+            <div class="step-item reveal delay-2">
+                <div class="step-number">3</div>
+                <div class="step-content"><h3>Development & Testing</h3><p>Kode bersih, responsif di semua perangkat, dan dioptimalkan untuk kecepatan maksimal.</p></div>
+            </div>
+            <div class="step-item reveal delay-3">
+                <div class="step-number">4</div>
+                <div class="step-content"><h3>Launch & Support</h3><p>Kami bantu publish, setup domain & hosting, lalu pantau performa landing page Anda.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="harga">
+        <h2 class="section-title reveal">Pilihan Paket Transparan</h2>
+        <div class="grid" id="harga-container">
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimoni" class="testimonials-section">
+        <h2 class="section-title reveal">Apa Kata Klien Kami?</h2>
+        <div class="testimonial-grid" id="testimonialGrid"></div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <h2 class="section-title reveal">Pertanyaan yang Sering Diajukan</h2>
+        <div class="faq-container" id="faqContainer"></div>
+    </section>
+
+    <section id="lokasi" class="map-section">
+        <h2 class="section-title reveal">Lokasi Kami</h2>
+        <p class="map-subtitle reveal delay-1">Universitas Muhammadiyah Kotabumi, Lampung Utara</p>
+        <div class="map-3d-wrapper">
+            <div class="map-container reveal delay-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.7480275714015!2d104.86909787397731!3d-4.813271395162178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e38a93919059cbf%3A0x2ed1e4d5a557b0cb!2sUniversitas%20Muhammadiyah%20Kotabumi!5e0!3m2!1sid!2sid!4v1775394363557!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" style="background-color: var(--bg-light); text-align: center;">
+        <div class="reveal">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">Siap Meningkatkan Penjualan Anda?</h2>
+            <p style="margin-bottom: 30px; font-size: 18px;">Diskusikan kebutuhan bisnis Anda bersama tim ahli kami hari ini.</p>
+            <a href="https://wa.me/62895610090128?text=Halo%20Landingin!%20Saya%20ingin%20konsultasi%20gratis%20mengenai%20pembuatan%20landing%20page." target="_blank" class="btn btn-primary" style="padding: 15px 40px; font-size: 18px; color: white; display: inline-block;">Hubungi via WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="enhanced-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Landingin</h4>
+                <p>Jasa pembuatan landing page profesional end-to-end. Dari desain hingga hosting, kami urus semuanya.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/arya.krnw/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100074492246628" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/62895610090128" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Layanan</h4>
+                <a href="#layanan">Landing Page</a>
+                <a href="#harga">Paket Harga</a>
+                <a href="#cara-kerja">Cara Kerja</a>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak</h4>
+                <p><i class="fas fa-map-marker-alt" style="color: var(--primary); margin-right: 8px;"></i>Universitas Muhammadiyah Kotabumi</p>
+                <p><i class="fas fa-phone-alt" style="color: var(--primary); margin-right: 8px;"></i>+62 895-6100-90128</p>
+                <p><i class="fas fa-envelope" style="color: var(--primary); margin-right: 8px;"></i>info@landingin.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Landingin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WA Button -->
+    <a href="https://wa.me/62895610090128?text=Halo%20Landingin!%20Saya%20tertarik%20dengan%20jasa%20pembuatan%20landing%20page." target="_blank" class="floating-wa" aria-label="Chat WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">↑</button>
+
+    <script>
+        const landinginData = {
+            "fitur": [
+                {
+                    "icon": "<i class='fas fa-palette'></i>",
+                    "title": "Desain UI/UX Eksklusif",
+                    "deskripsi": "Kami tidak menggunakan template murahan. Setiap landing page didesain khusus sesuai dengan identitas dan tujuan brand Anda."
+                },
+                {
+                    "icon": "<i class='fas fa-pen-fancy'></i>",
+                    "title": "Copywriting Persuasif",
+                    "deskripsi": "Bukan sekadar teks. Tim kami menulis susunan kata yang dirancang secara psikologis untuk mendorong pengunjung menekan tombol beli."
+                },
+                {
+                    "icon": "<i class='fas fa-rocket'></i>",
+                    "title": "Performa Super Cepat",
+                    "deskripsi": "Website lambat membunuh konversi. Kami memastikan landing page Anda memuat dalam hitungan milidetik dengan kode yang bersih."
+                },
+                {
+                    "icon": "<i class='fas fa-cloud'></i>",
+                    "title": "Hosting & Domain Gratis",
+                    "deskripsi": "Terima beres! Kami mengurus semua masalah teknis server, hosting, hingga keamanan SSL (HTTPS) untuk Anda."
+                },
+                {
+                    "icon": "<i class='fas fa-chart-line'></i>",
+                    "title": "SEO & Analytics Terintegrasi",
+                    "deskripsi": "Landing page Anda dioptimalkan agar mudah ditemukan di Google, lengkap dengan integrasi analytics untuk memantau performa."
+                },
+                {
+                    "icon": "<i class='fas fa-headset'></i>",
+                    "title": "Support Responsif",
+                    "deskripsi": "Tim support kami siap membantu Anda kapan saja. Konsultasi teknis dan revisi? Hubungi kami langsung via WhatsApp."
+                }
+            ],
+            "paketHarga": [
+                {
+                    "nama": "Basic",
+                    "harga": "Rp 199.000",
+                    "tipe": "sekali bayar",
+                    "fitur": [
+                        "1 Halaman Landing Page",
+                        "Desain Responsif (Mobile Friendly)",
+                        "Copywriting Standar",
+                        "Gratis Hosting 1 Tahun",
+                        "Revisi 2x"
+                    ],
+                    "rekomendasi": false
+                },
+                {
+                    "nama": "Pro (Best Value)",
+                    "harga": "Rp 699.000",
+                    "tipe": "sekali bayar",
+                    "fitur": [
+                        "Halaman Landing Page Panjang",
+                        "Premium Custom Design",
+                        "Copywriting Persuasif Tingkat Lanjut",
+                        "Integrasi (FB/TikTok/Google)",
+                        "Gratis Domain & Hosting 1 Tahun",
+                        "Revisi 5x"
+                    ],
+                    "rekomendasi": true
+                },
+                {
+                    "nama": "Enterprise",
+                    "harga": "Rp 1.499.000",
+                    "tipe": "sekali bayar",
+                    "fitur": [
+                        "Multi-Step Landing Page (Funnel)",
+                        "Desain Animasi Kustom",
+                        "A/B Testing Setup",
+                        "Prioritas Support 24/7",
+                        "Gratis Domain & Hosting VIP",
+                        "Revisi Unlimited"
+                    ],
+                    "rekomendasi": false
+                }
+            ]
+        };
+
+
+        function renderKonten() {
+
+            const fiturContainer = document.getElementById('fitur-container');
+            landinginData.fitur.forEach((item, index) => {
+                const delayClass = `delay-${(index % 3) + 1}`;
+                const cardHtml = `
+                    <div class="card reveal ${delayClass}">
+                        <div class="icon-box">${item.icon}</div>
+                        <h3>${item.title}</h3>
+                        <p>${item.deskripsi}</p>
+                    </div>
+                `;
+                fiturContainer.innerHTML += cardHtml;
+            });
+
+
+            const hargaContainer = document.getElementById('harga-container');
+            landinginData.paketHarga.forEach((paket, index) => {
+                const delayClass = `delay-${(index % 3) + 1}`;
+                const borderStyle = paket.rekomendasi ? 'border: 2px solid var(--primary); transform: scale(1.05); z-index: 10;' : '';
+                const badgeHtml = paket.rekomendasi ? '<div style="background: var(--primary); color: white; position: absolute; top: 0; right: 0; padding: 5px 15px; border-bottom-left-radius: 15px;">Terlaris</div>' : '';
+
+                let listFitur = '';
+                paket.fitur.forEach(f => {
+                    listFitur += `<li>${f}</li>`;
+                });
+
+                const hargaHtml = `
+                    <div class="card reveal ${delayClass}" style="${borderStyle}">
+                        ${badgeHtml}
+                        <h3>${paket.nama}</h3>
+                        <div class="price-tag">${paket.harga} <span>/${paket.tipe}</span></div>
+                        <ul class="features-list">
+                            ${listFitur}
+                        </ul>
+                        <a href="https://wa.me/62895610090128?text=${encodeURIComponent('Halo Landingin! Saya tertarik dengan paket ' + paket.nama + ' (' + paket.harga + '). Mohon informasi lebih lanjut.')}" target="_blank" class="btn ${paket.rekomendasi ? 'btn-primary' : ''}" style="${paket.rekomendasi ? 'color: white;' : 'background: var(--bg-light); color: var(--secondary); border: 1px solid var(--text-muted);'} width: 100%; margin-top: 20px; display: block; text-align: center;">Pilih ${paket.nama}</a>
+                    </div>
+                `;
+                hargaContainer.innerHTML += hargaHtml;
+            });
+        }
+
+        renderKonten();
+
+        function exposeAnimations() {
+            const reveals = document.querySelectorAll('.reveal');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px" 
+            });
+
+            reveals.forEach(reveal => {
+                observer.observe(reveal);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', exposeAnimations);
+
+        // === TESTIMONIALS ===
+        const testimonials = [
+            { name: "Prabowo Subianto", role: "Presiden RI", avatar: "img/prabowo.jpg", text: "Landing page dari Landingin benar-benar meningkatkan penjualan kami hingga 300%. Desainnya profesional dan loading-nya super cepat!", stars: 5 },
+            { name: "Joko Widodo", role: "Presiden RI ke-7", avatar: "img/jokowi.jpg", text: "Prosesnya mudah banget, tinggal konsultasi lalu terima beres. Hasilnya memuaskan dan banyak customer yang bilang website-nya keren!", stars: 5 },
+            { name: "Anies Baswedan", role: "Mantan Gubernur DKI Jakarta", avatar: "img/anies.jpg", text: "Sudah coba beberapa jasa lain, tapi Landingin yang paling worth it. Harga terjangkau tapi kualitasnya premium.", stars: 5 },
+            { name: "Ganjar Pranowo", role: "Mantan Gubernur Jawa Tengah", avatar: "img/ganjar.jpg", text: "Tim Landingin sangat responsif dan memahami kebutuhan bisnis saya. Landing page yang dibuat langsung mendatangkan banyak leads.", stars: 5 }
+        ];
+        const tGrid = document.getElementById('testimonialGrid');
+        testimonials.forEach((t, i) => {
+            const delayClass = `delay-${(i % 3) + 1}`;
+            tGrid.innerHTML += `<div class="testimonial-card reveal ${delayClass}"><div class="testimonial-avatar"><img src="${t.avatar}" alt="${t.name}"></div><div class="stars">${'★'.repeat(t.stars)}</div><blockquote>"${t.text}"</blockquote><div class="testimonial-author">${t.name}</div><div class="testimonial-role">${t.role}</div></div>`;
+        });
+
+        // === FAQ ===
+        const faqs = [
+            { q: "Berapa lama proses pembuatan landing page?", a: "Umumnya 3-7 hari kerja tergantung kompleksitas paket yang dipilih. Paket Basic bisa selesai dalam 3 hari." },
+            { q: "Apakah saya bisa request revisi?", a: "Tentu! Setiap paket sudah termasuk kuota revisi. Paket Basic 2x revisi, Pro 5x, dan Enterprise unlimited." },
+            { q: "Apakah sudah termasuk hosting dan domain?", a: "Ya! Semua paket sudah termasuk hosting gratis 1 tahun. Paket Pro dan Enterprise juga termasuk domain gratis." },
+            { q: "Bisa integrasi dengan Facebook Pixel atau Google Analytics?", a: "Bisa! Paket Pro dan Enterprise sudah termasuk setup integrasi tracking untuk mengoptimalkan iklan Anda." },
+            { q: "Bagaimana jika saya tidak puas dengan hasilnya?", a: "Kami memberikan garansi kepuasan. Jika tidak sesuai brief, kami akan revisi hingga Anda puas sesuai kuota revisi paket." }
+        ];
+        const faqC = document.getElementById('faqContainer');
+        faqs.forEach((f, i) => {
+            const div = document.createElement('div');
+            div.className = 'faq-item reveal' + (i < 3 ? ` delay-${i + 1}` : '');
+            div.innerHTML = `<div class="faq-question" onclick="this.parentElement.classList.toggle('open')"><span>${f.q}</span><span class="faq-icon">+</span></div><div class="faq-answer"><p>${f.a}</p></div>`;
+            faqC.appendChild(div);
+        });
+
+        // === ANIMATED COUNTERS ===
+        function animateCounter(id, target, suffix = '') {
+            const el = document.getElementById(id);
+            let current = 0;
+            const step = Math.max(1, Math.floor(target / 60));
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) { current = target; clearInterval(timer); }
+                el.textContent = current.toLocaleString('id-ID') + suffix;
+            }, 30);
+        }
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter('counter-projects', 150, '+');
+                    animateCounter('counter-clients', 120, '+');
+                    animateCounter('counter-years', 3, '+');
+                    animateCounter('counter-uptime', 99, '');
+                    statsObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+        statsObserver.observe(document.querySelector('.stats-section'));
+
+        // === HAMBURGER MENU ===
+        document.getElementById('hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('navLinks').classList.toggle('mobile-open');
+        });
+        document.querySelectorAll('#navLinks a').forEach(a => {
+            a.addEventListener('click', () => {
+                document.getElementById('hamburger').classList.remove('active');
+                document.getElementById('navLinks').classList.remove('mobile-open');
+            });
+        });
+
+        // === BACK TO TOP ===
+        const backBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backBtn.classList.toggle('visible', window.scrollY > 500);
+        });
+        backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+
+</html>
